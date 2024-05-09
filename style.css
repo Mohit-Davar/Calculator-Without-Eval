@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(32 36 43);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-body {
+    position: absolute;
+    background-color: rgb(36 41 47);
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px 20px;
+
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.3);
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+
+    transform: scale(0.8);
+
+}
+
+.calculator-body .button-operator,
+.calculator-body .button-number {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    color: white;
+    text-align: center;
+    line-height: 85px;
+    font-size: 25px;
+
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3),
+        -4px -4px 5px 2px rgba(255, 255, 255, 0.3);
+
+    margin: 10px 10px;
+    font-family:'Agbalumo', sans-serif;
+
+    cursor: pointer;
+}
+
+.calculator-body .button-operator {
+    color: rgb(2 241 30);
+    font-size: 30px;
+}
+
+.calculator-body .button-operator:hover,
+.calculator-body .button-number:hover,
+.calculator-body .button-operator:active,
+.calculator-body .button-number:active{
+    transform: scale(0.9);
+    box-shadow: inset 5px 5px 2px rgba(0, 0, 0, 0.3),
+                inset -5px -5px 5px 2px rgba(255, 255, 255, 0.3);   
+
+}
+
+.screen {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    height: 140px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    color: black;
+    padding: 20px;
+    font-size: 80px;
+    margin-bottom: 10px;
+    font-family:'VT323', sans-serif;
+
+    background-color: rgb(170 178 127);
+
+}
+
+#answer{
+    color: white;
+    background-color: rgb(2 241 30);
+}
+@media screen and (max-width: 430px) {
+    .calculator-body{
+        transform: scale(0.5);
+    }
+}
+@media screen and (max-width: 300px) {
+    .calculator-body{
+        transform: scale(0.3);
+    }
+}
+#start{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: auto;
+    border-radius: 20px;
+    background-color: rgb(2 241 30);
+    color: white;
+}
+.upperscreen{
+    position: absolute;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    background-color: rgb(170 178 127);
+
+    width: 435px;
+    height: 40px;
+
+    top: 27px;
+    left: 22px;
+
+    padding-right: 20px;
+    color: black;
+    font-family:'VT323', sans-serif;
+    font-size: 30px;
+
+
+
+}
